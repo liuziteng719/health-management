@@ -1,0 +1,163 @@
+.dashboard {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: calc(100vh - 64px);
+}
+
+/* 卡片基础样式 */
+.stat-card {
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 统计数据样式 */
+.ant-statistic-title {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.ant-statistic-content {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* 图表容器 */
+.chart-container {
+  height: 300px;
+  margin: 20px 0;
+}
+
+/* 时间线样式 */
+.timeline-card {
+  margin-top: 16px;
+}
+
+.ant-timeline {
+  padding: 16px;
+}
+
+/* 日历样式 */
+.calendar-card {
+  margin-top: 16px;
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+  .dashboard {
+    padding: 20px;
+  }
+
+  .ant-statistic-title {
+    font-size: 14px;
+  }
+
+  .ant-statistic-content {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 16px;
+  }
+
+  .stat-card {
+    margin-bottom: 16px;
+  }
+
+  .chart-container {
+    height: 250px;
+  }
+
+  .ant-col {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 12px;
+  }
+
+  .ant-card-body {
+    padding: 16px;
+  }
+
+  .chart-container {
+    height: 200px;
+  }
+
+  .ant-statistic-content {
+    font-size: 18px;
+  }
+}
+
+/* 平板设备优化 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .stat-card {
+    margin-bottom: 20px;
+  }
+
+  .chart-container {
+    height: 280px;
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) {
+  .stat-card:hover {
+    transform: none;
+  }
+}
+
+/* 加载动画 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 200px;
+}
+
+/* 进度条样式 */
+.ant-progress {
+  margin-top: 8px;
+}
+
+.ant-progress-text {
+  font-size: 12px;
+}
+
+/* 网格布局优化 */
+.dashboard-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* 暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .dashboard {
+    background: #141414;
+  }
+
+  .ant-card {
+    background: #1f1f1f;
+  }
+
+  .ant-statistic-title {
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .ant-statistic-content {
+    color: #fff;
+  }
+} 

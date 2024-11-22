@@ -1,0 +1,195 @@
+.notification-badge {
+  padding: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.notification-icon {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.65);
+  transition: color 0.3s;
+}
+
+.notification-icon:hover {
+  color: var(--primary-color);
+}
+
+/* 通知列表样式 */
+.notification-list {
+  width: 350px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.notification-item {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.notification-item:hover {
+  background-color: #f5f5f5;
+}
+
+.notification-item.unread {
+  background-color: #e6f7ff;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.notification-message {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 8px;
+}
+
+.notification-time {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .notification-list {
+    width: 300px;
+    max-height: 350px;
+  }
+
+  .notification-item {
+    padding: 12px;
+  }
+
+  .notification-message {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notification-list {
+    width: calc(100vw - 32px);
+    position: fixed;
+    top: 64px;
+    left: 16px;
+    right: 16px;
+    max-height: calc(100vh - 80px);
+    border-radius: 8px;
+  }
+
+  .notification-item {
+    padding: 10px;
+  }
+
+  .notification-title {
+    font-size: 14px;
+  }
+
+  .notification-message {
+    font-size: 12px;
+  }
+
+  .notification-time {
+    font-size: 11px;
+  }
+}
+
+/* 滚动条样式 */
+.notification-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.notification-list::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: 3px;
+}
+
+.notification-list::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+/* 暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .notification-list {
+    background: #1f1f1f;
+  }
+
+  .notification-item {
+    border-bottom-color: #303030;
+  }
+
+  .notification-item:hover {
+    background-color: #2a2a2a;
+  }
+
+  .notification-item.unread {
+    background-color: #11263c;
+  }
+
+  .notification-title {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .notification-message {
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .notification-time {
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  .notification-icon {
+    color: rgba(255, 255, 255, 0.65);
+  }
+}
+
+/* 动画效果 */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notification-list {
+  animation: slideIn 0.3s ease;
+}
+
+/* 空状态样式 */
+.empty-notifications {
+  padding: 24px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.empty-notifications .anticon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+/* 加载状态 */
+.loading-notifications {
+  padding: 24px;
+  text-align: center;
+}
+
+/* 触摸设备优化 */
+@media (hover: none) {
+  .notification-item:active {
+    background-color: #f5f5f5;
+  }
+} 

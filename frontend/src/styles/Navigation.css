@@ -1,0 +1,227 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 64px;
+}
+
+/* Logo样式 */
+.logo {
+  flex-shrink: 0;
+  margin-right: 48px;
+}
+
+.logo a {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 菜单样式 */
+.desktop-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.ant-menu {
+  border: none;
+  background: transparent;
+}
+
+.ant-menu-horizontal {
+  line-height: 64px;
+}
+
+.ant-menu-item {
+  padding: 0 20px;
+}
+
+.ant-menu-item .anticon {
+  margin-right: 8px;
+}
+
+/* 用户操作区域 */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* 移动端菜单按钮 */
+.mobile-menu-button {
+  display: none;
+}
+
+/* 抽屉菜单样式 */
+.mobile-drawer .ant-drawer-body {
+  padding: 0;
+}
+
+.drawer-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .ant-menu-item {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+    margin-right: 16px;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .user-actions {
+    margin-left: auto;
+  }
+
+  .logout-button {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 0 12px;
+  }
+
+  .logo a {
+    font-size: 1rem;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .user-actions {
+    gap: 8px;
+  }
+
+  .ant-avatar {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* 平板设备优化 */
+@media (min-width: 768px) and (max-width: 991px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .logo a {
+    font-size: 1.1rem;
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) {
+  .ant-menu-item:active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .header {
+    background: #1f1f1f;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .logo a {
+    color: var(--primary-color);
+  }
+
+  .ant-menu {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .ant-menu-item:hover {
+    color: var(--primary-color);
+  }
+
+  .drawer-footer {
+    border-top-color: #303030;
+  }
+}
+
+/* 动画效果 */
+.ant-menu-item {
+  transition: all 0.3s ease;
+}
+
+.ant-menu-item:hover {
+  transform: translateY(-2px);
+}
+
+/* 活跃状态 */
+.ant-menu-item-selected {
+  color: var(--primary-color) !important;
+}
+
+.ant-menu-item-selected::after {
+  background: var(--primary-color) !important;
+}
+
+/* 抽屉动画 */
+.ant-drawer-content-wrapper {
+  transition: transform 0.3s ease !important;
+}
+
+/* 加载状态 */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+/* 通知图标样式 */
+.notification-badge {
+  cursor: pointer;
+}
+
+.notification-badge .ant-badge-count {
+  background: var(--primary-color);
+} 

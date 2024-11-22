@@ -1,0 +1,236 @@
+.workout-plan {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: calc(100vh - 64px);
+}
+
+/* 卡片基础样式 */
+.plan-card {
+  border-radius: 12px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 表单样式 */
+.exercise-form {
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.form-col {
+  flex: 1;
+  min-width: 200px;
+  padding: 0 8px;
+}
+
+/* 运动项目卡片 */
+.exercise-card {
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* 难度标签 */
+.difficulty-tag {
+  margin-right: 8px;
+  border-radius: 12px;
+}
+
+.difficulty-tag.beginner {
+  color: #52c41a;
+  background: #f6ffed;
+  border-color: #b7eb8f;
+}
+
+.difficulty-tag.intermediate {
+  color: #faad14;
+  background: #fff7e6;
+  border-color: #ffd591;
+}
+
+.difficulty-tag.advanced {
+  color: #f5222d;
+  background: #fff1f0;
+  border-color: #ffa39e;
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+  .workout-plan {
+    padding: 20px;
+  }
+
+  .plan-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .workout-plan {
+    padding: 16px;
+  }
+
+  .exercise-form {
+    padding: 16px;
+  }
+
+  .exercise-card {
+    padding: 12px;
+  }
+
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+
+  .ant-table {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workout-plan {
+    padding: 12px;
+  }
+
+  .exercise-form {
+    padding: 12px;
+  }
+
+  .exercise-card {
+    padding: 10px;
+  }
+
+  .ant-table {
+    font-size: 12px;
+  }
+
+  .ant-table-cell {
+    padding: 8px !important;
+  }
+
+  .difficulty-tag {
+    margin-bottom: 4px;
+  }
+}
+
+/* 平板设备优化 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .form-col {
+    min-width: 250px;
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) {
+  .plan-card:hover {
+    transform: none;
+  }
+
+  .exercise-card:active {
+    background: #fafafa;
+  }
+}
+
+/* 暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .workout-plan {
+    background: #141414;
+  }
+
+  .exercise-card {
+    background: #1f1f1f;
+  }
+
+  .difficulty-tag.beginner {
+    background: #162312;
+    border-color: #274916;
+  }
+
+  .difficulty-tag.intermediate {
+    background: #2b2111;
+    border-color: #443111;
+  }
+
+  .difficulty-tag.advanced {
+    background: #2a1215;
+    border-color: #431418;
+  }
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* 按钮样式 */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media (max-width: 480px) {
+  .action-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+}
+
+/* 表格响应式 */
+.ant-table {
+  overflow-x: auto;
+}
+
+/* 进度指示器 */
+.progress-steps {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 480px) {
+  .progress-steps {
+    margin-bottom: 16px;
+  }
+
+  .ant-steps-item-title {
+    font-size: 12px;
+  }
+}
+
+/* 肌群标签云 */
+.muscle-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.muscle-tag {
+  border-radius: 12px;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.muscle-tag.selected {
+  background: var(--primary-color);
+  color: white;
+} 

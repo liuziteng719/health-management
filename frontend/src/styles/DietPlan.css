@@ -1,0 +1,209 @@
+.diet-plan {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: calc(100vh - 64px);
+}
+
+/* 卡片基础样式 */
+.plan-card {
+  border-radius: 12px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 表单样式 */
+.meal-form {
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.form-col {
+  flex: 1;
+  min-width: 200px;
+  padding: 0 8px;
+}
+
+/* 餐次卡片样式 */
+.meal-card {
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* 食物列表样式 */
+.food-list {
+  margin-top: 16px;
+}
+
+.food-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.food-info {
+  flex: 1;
+}
+
+.food-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* 营养信息展示 */
+.nutrition-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.nutrition-item {
+  text-align: center;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+  .diet-plan {
+    padding: 20px;
+  }
+
+  .plan-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .diet-plan {
+    padding: 16px;
+  }
+
+  .meal-form {
+    padding: 16px;
+  }
+
+  .meal-card {
+    padding: 12px;
+  }
+
+  .nutrition-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .diet-plan {
+    padding: 12px;
+  }
+
+  .meal-form {
+    padding: 12px;
+  }
+
+  .food-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .food-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .nutrition-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 平板设备优化 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .form-col {
+    min-width: 250px;
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) {
+  .plan-card:hover {
+    transform: none;
+  }
+}
+
+/* 暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .diet-plan {
+    background: #141414;
+  }
+
+  .meal-card {
+    background: #1f1f1f;
+  }
+
+  .food-item {
+    border-bottom-color: #303030;
+  }
+
+  .nutrition-item {
+    background: #262626;
+  }
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* 按钮样式 */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media (max-width: 480px) {
+  .action-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+}
+
+/* 表格响应式 */
+.ant-table {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .ant-table {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ant-table {
+    font-size: 12px;
+  }
+} 

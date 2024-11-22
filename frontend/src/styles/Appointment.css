@@ -1,0 +1,230 @@
+.appointment {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: calc(100vh - 64px);
+}
+
+/* 医生列表卡片 */
+.doctor-card {
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 医生信息样式 */
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.doctor-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-details {
+  flex: 1;
+}
+
+.doctor-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.doctor-specialization {
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.doctor-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 时间选择器样式 */
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.time-slot {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.time-slot:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.time-slot.selected {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.time-slot.disabled {
+  background: #f5f5f5;
+  color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+/* 预约表单样式 */
+.appointment-form {
+  margin-top: 24px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+  .appointment {
+    padding: 20px;
+  }
+
+  .doctor-avatar {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .appointment {
+    padding: 16px;
+  }
+
+  .doctor-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .doctor-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .time-slots {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .appointment-form {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment {
+    padding: 12px;
+  }
+
+  .doctor-name {
+    font-size: 16px;
+  }
+
+  .time-slots {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+  }
+
+  .time-slot {
+    padding: 6px;
+    font-size: 12px;
+  }
+}
+
+/* 平板设备优化 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .doctor-card {
+    margin-bottom: 16px;
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) {
+  .doctor-card:hover {
+    transform: none;
+  }
+
+  .time-slot:active {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+
+/* 暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .appointment {
+    background: #141414;
+  }
+
+  .doctor-card,
+  .appointment-form {
+    background: #1f1f1f;
+  }
+
+  .time-slot {
+    border-color: #434343;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .time-slot:hover {
+    border-color: var(--primary-color);
+  }
+
+  .time-slot.disabled {
+    background: #262626;
+    color: #434343;
+  }
+}
+
+/* 筛选器样式 */
+.filters {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .filters {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* 预约确认弹窗 */
+.confirmation-modal .ant-modal-body {
+  padding: 24px;
+}
+
+@media (max-width: 480px) {
+  .confirmation-modal .ant-modal-body {
+    padding: 16px;
+  }
+} 

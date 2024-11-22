@@ -1,0 +1,212 @@
+.community {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: calc(100vh - 64px);
+}
+
+/* 发帖卡片样式 */
+.post-card {
+  margin-bottom: 20px;
+}
+
+.post-button {
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+}
+
+/* 帖子列表样式 */
+.post-item {
+  margin-bottom: 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.post-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.post-author {
+  margin-left: 8px;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.post-date {
+  margin-left: auto;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+}
+
+.post-content {
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.post-actions {
+  display: flex;
+  gap: 16px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.post-actions span {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.post-actions span:hover {
+  color: var(--primary-color);
+}
+
+/* 标签样式 */
+.post-tags {
+  margin-top: 12px;
+}
+
+.ant-tag {
+  margin: 4px;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+  .community {
+    padding: 20px;
+  }
+
+  .post-content {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .community {
+    padding: 16px;
+  }
+
+  .post-item {
+    margin-bottom: 12px;
+  }
+
+  .post-header {
+    flex-wrap: wrap;
+  }
+
+  .post-date {
+    width: 100%;
+    margin-top: 4px;
+    text-align: left;
+  }
+
+  .post-actions {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .community {
+    padding: 12px;
+  }
+
+  .post-button {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .post-content {
+    font-size: 13px;
+  }
+
+  .ant-card-body {
+    padding: 16px;
+  }
+}
+
+/* 平板设备优化 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .post-item {
+    margin-bottom: 16px;
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) {
+  .post-item:hover {
+    transform: none;
+  }
+
+  .post-actions span {
+    padding: 8px;
+  }
+}
+
+/* 图片上传区域 */
+.upload-area {
+  margin: 16px 0;
+}
+
+.ant-upload-list-picture-card .ant-upload-list-item {
+  border-radius: 8px;
+}
+
+/* 评论区样式 */
+.comments-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.comment-item {
+  padding: 8px 0;
+}
+
+.comment-author {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* 暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .community {
+    background: #141414;
+  }
+
+  .post-item {
+    background: #1f1f1f;
+  }
+
+  .post-author {
+    color: var(--primary-color);
+  }
+
+  .post-date,
+  .post-actions {
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  .comments-section {
+    border-top-color: #303030;
+  }
+} 

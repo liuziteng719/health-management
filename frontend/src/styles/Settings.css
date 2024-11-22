@@ -1,0 +1,212 @@
+.settings {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: calc(100vh - 64px);
+}
+
+/* 卡片基础样式 */
+.settings-card {
+  border-radius: 12px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.settings-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 表单样式 */
+.ant-form-item-label {
+  padding-bottom: 4px;
+}
+
+.ant-form-item {
+  margin-bottom: 24px;
+}
+
+/* 头像上传区域 */
+.avatar-uploader {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.avatar-uploader .ant-upload {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.avatar-uploader img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 通知设置样式 */
+.notification-setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.notification-setting span {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+  .settings {
+    padding: 20px;
+  }
+
+  .settings-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .settings {
+    padding: 16px;
+  }
+
+  .settings-card {
+    margin-bottom: 16px;
+  }
+
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+
+  .notification-setting {
+    padding: 8px 0;
+  }
+
+  .ant-col {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings {
+    padding: 12px;
+  }
+
+  .ant-card-body {
+    padding: 16px;
+  }
+
+  .avatar-uploader .ant-upload {
+    width: 96px;
+    height: 96px;
+  }
+
+  .notification-setting span {
+    font-size: 13px;
+  }
+}
+
+/* 平板设备优化 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .settings-card {
+    margin-bottom: 20px;
+  }
+
+  .ant-col {
+    padding: 8px;
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) {
+  .settings-card:hover {
+    transform: none;
+  }
+
+  .ant-switch {
+    height: 24px;
+  }
+}
+
+/* 暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .settings {
+    background: #141414;
+  }
+
+  .settings-card {
+    background: #1f1f1f;
+  }
+
+  .notification-setting span {
+    color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+/* 表单布局优化 */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.form-col {
+  padding: 0 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* 按钮样式 */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  .action-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+}
+
+/* 分隔线样式 */
+.ant-divider {
+  margin: 16px 0;
+}
+
+/* 输入框样式优化 */
+.ant-input-number {
+  width: 100% !important;
+}
+
+.ant-select {
+  width: 100% !important;
+}
+
+/* 错误提示样式 */
+.ant-form-item-explain-error {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.ant-switch {
+  background-color: var(--primary-color);
+} 

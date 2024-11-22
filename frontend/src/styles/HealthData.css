@@ -1,0 +1,223 @@
+.health-data {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: calc(100vh - 64px);
+}
+
+/* 卡片基础样式 */
+.data-card {
+  border-radius: 12px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.data-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 数据录入表单 */
+.data-form {
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.form-col {
+  flex: 1;
+  min-width: 200px;
+  padding: 0 8px;
+}
+
+/* 数据展示表格 */
+.data-table {
+  margin-top: 16px;
+}
+
+.ant-table-wrapper {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* 图表容器 */
+.chart-container {
+  height: 300px;
+  margin: 20px 0;
+}
+
+/* 数据指标卡片 */
+.metric-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.metric-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.metric-label {
+  margin-top: 8px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+  .health-data {
+    padding: 20px;
+  }
+
+  .data-card {
+    margin-bottom: 20px;
+  }
+
+  .chart-container {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .health-data {
+    padding: 16px;
+  }
+
+  .data-card {
+    margin-bottom: 16px;
+  }
+
+  .data-form {
+    padding: 16px;
+  }
+
+  .chart-container {
+    height: 250px;
+  }
+
+  .metric-value {
+    font-size: 20px;
+  }
+
+  .ant-table {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .health-data {
+    padding: 12px;
+  }
+
+  .data-form {
+    padding: 12px;
+  }
+
+  .chart-container {
+    height: 200px;
+  }
+
+  .metric-value {
+    font-size: 18px;
+  }
+
+  .ant-table {
+    font-size: 12px;
+  }
+
+  .ant-table-cell {
+    padding: 8px !important;
+  }
+}
+
+/* 平板设备优化 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .form-col {
+    min-width: 250px;
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) {
+  .data-card:hover {
+    transform: none;
+  }
+
+  .ant-table-row:active {
+    background: #f5f5f5;
+  }
+}
+
+/* 暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .health-data {
+    background: #141414;
+  }
+
+  .data-card {
+    background: #1f1f1f;
+  }
+
+  .metric-value {
+    color: var(--primary-color);
+  }
+
+  .metric-label {
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .ant-table {
+    background: #1f1f1f;
+  }
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* 数据筛选器 */
+.data-filters {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .data-filters {
+    gap: 8px;
+  }
+
+  .data-filters .ant-select,
+  .data-filters .ant-picker {
+    width: 100% !important;
+  }
+}
+
+/* 数据标签 */
+.data-tag {
+  border-radius: 12px;
+  padding: 2px 8px;
+  margin: 2px;
+}
+
+/* 表格操作按钮 */
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .table-actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+} 
